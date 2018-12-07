@@ -16,7 +16,8 @@
   "license": "MIT",
   "homepage": "https://github.com/bmatcuk/nyandagi.cat#readme",
   "scripts": {
-    "start": "brunch watch -s"
+    "start": "brunch watch -s",
+    "build": "rimraf public && brunch build -p"
   },
   "devDependencies": {
     "brunch": "~2.10.17",
@@ -25,6 +26,7 @@
     "marked-brunch-static": "~1.1.0",
     "postcss-brunch": "~2.10.1",
     "postcss-preset-env": "~6.4.0",
-    "pug-brunch-static": "~3.0.0"
+    "pug-brunch-static": "~3.0.0",
+    "rimraf": "~2.6.2"
   }
 }
