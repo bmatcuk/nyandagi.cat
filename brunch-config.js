@@ -16,7 +16,7 @@ module.exports.config = {
             require("pug-brunch-static")(),
             require("marked-brunch-static")(),
           ],
-          partials: /(partials?|README.md)/,
+          partials: /(partials?|\.md)/,
           minify: true,
         }),
       ],
