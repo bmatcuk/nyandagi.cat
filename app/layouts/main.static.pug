@@ -18,7 +18,7 @@ html(lang=lang prefix="og: http://ogp.me/ns#")
     meta(property="og:image:alt", content="nyan, nyan!")/
     meta(property="twitter:card", content="summary_large_image")/
     link(href="https://fonts.googleapis.com/css?family=Diplomata+SC|Lato|Merriweather", rel="stylesheet")/
-    link(rel="stylesheet", type="text/css", href="/app.css")/
+    link(rel="stylesheet", type="text/css", href=`/app.${buildHash}.css`)/
   body(class=lang)
     | {{ content }}
 

@@ -1,10 +1,14 @@
+const buildHash = require("child_process")
+  .execSync("git rev-parse HEAD")
+  .toString().trim();
+
 module.exports.config = {
   files: {
     javascripts: {
-      joinTo: "app.js",
+      joinTo: `app.${buildHash}.js`,
     },
     stylesheets: {
-      joinTo: "app.css",
+      joinTo: `app.${buildHash}.css`,
     },
   },
 
@@ -16,6 +20,9 @@ module.exports.config = {
             require("pug-brunch-static")(),
             require("marked-brunch-static")(),
           ],
+          defaultContext: {
+            buildHash: buildHash,
+          },
           partials: /(partials?|\.md)/,
           minify: true,
         }),
