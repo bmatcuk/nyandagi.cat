@@ -1,0 +1,30 @@
+{
+  "name": "nyandagi.cat",
+  "version": "1.0.0",
+  "description": "nyandagi!",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmatcuk/nyandagi.cat.git"
+  },
+  "keywords": [
+    "nyan",
+    "andagi",
+    "cat"
+  ],
+  "author": "Bob Matcuk",
+  "license": "MIT",
+  "homepage": "https://github.com/bmatcuk/nyandagi.cat#readme",
+  "scripts": {
+    "start": "brunch watch -s"
+  },
+  "devDependencies": {
+    "brunch": "~2.10.17",
+    "brunch-static": "~1.2.1",
+    "html-brunch-static": "~1.4.0",
+    "marked-brunch-static": "~1.1.0",
+    "postcss-brunch": "~2.10.1",
+    "postcss-preset-env": "~6.4.0",
+    "pug-brunch-static": "~3.0.0"
+  }
+}

@@ -1,0 +1,164 @@
+@custom-selector :--headers h1, h2, h3;
+
+@-ms-viewport {
+  width: device-width;
+}
+
+:root {
+  --light-blue: #00a3a6;
+  --dark-blue: #005859;
+  --mid-grey: #817155;
+  --dark-grey: #272422;
+  --dark-brown: #40332b;
+  --text: #e2eae2;
+  --line-height: 1.3125;
+}
+
+body {
+  background: var(--dark-blue);
+  background:
+    radial-gradient(
+      ellipse closest-corner at center 50vh,
+      var(--light-blue) 0%,
+      var(--dark-blue) 100%
+    ) no-repeat,
+    var(--dark-blue);
+  font-family: 'Merriweather', serif;
+  line-height: var(--line-height);
+  color: var(--text);
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+a:any-link {
+  color: var(--text);
+}
+
+a:matches(:any-link, :hover, :active) {
+  text-decoration: none;
+}
+
+:--headers {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 0.1em;
+}
+
+p {
+  line-height: 1.6;
+  font-size: 1.25em;
+}
+
+aside.languages {
+  background: var(--dark-grey);
+  font-size: 0.8rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  & header {
+    font-family: 'Lato', sans-serif;
+    padding: 5px 0 5px 10px;
+    cursor: pointer;
+
+    &::after {
+      border-left: 1px solid var(--mid-grey);
+      display: inline-block;
+      text-align: center;
+      margin-left: 0.5em;
+      content: "\2335";
+      width: 1.8em;
+    }
+
+    &:matches(:active, :focus, :hover) {
+      background: var(--dark-brown);
+    }
+  }
+
+  & ul {
+    display: none;
+    list-style: none;
+    position: absolute;
+    max-height: 100vh;
+    overflow-y: auto;
+    min-width: 100%;
+    padding: calc(var(--line-height) * 1em + 10px) 0 0;
+    margin: 0;
+    left: 0;
+    top: 0;
+  }
+
+  & li {
+    background: var(--dark-grey);
+    border-top: 1px solid var(--mid-grey);
+
+    &:hover {
+      background: var(--dark-brown);
+    }
+
+    & a {
+      box-sizing: border-box;
+      display: inline-block;
+      padding: 10px 5px;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  & ul:hover,
+  &:matches(:active, :focus) ul {
+    display: block;
+  }
+}
+
+section.index {
+  height: 100vh;
+  width: 100%;
+
+  & div.nyandagi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 50vw;
+    height: 50vh;
+
+    & img {
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  & header,
+  & footer {
+    display: flex;
+    height: 25vh;
+    width: 100%;
+
+    & svg {
+      width: 100%;
+      height: 100%;
+
+      & text {
+        font-family: 'Diplomata SC', cursive;
+        font-size: 4.2rem;
+        fill: var(--text);
+      }
+    }
+  }
+}
+
+section.about {
+  max-width: 40em;
+  margin: 5em auto;
+  text-align: justify;
+
+  & :--headers {
+    text-align: center;
+  }
+
+  & h1 {
+    font-size: 2em;
+  }
+}
