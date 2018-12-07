@@ -22,9 +22,9 @@ html(lang=lang prefix="og: http://ogp.me/ns#")
   body(class=lang)
     | {{ content }}
 
-    aside.languages
-      header=language
-      ul
+    aside.languages(aria-haspopup="true")
+      header(tabindex="0")=language
+      ul(aria-label=language)
         li.en
           a(href="/") English
         li.ca
