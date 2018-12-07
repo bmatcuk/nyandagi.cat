@@ -22,11 +22,11 @@
   "devDependencies": {
     "brunch": "~2.10.17",
     "brunch-static": "~1.2.1",
-    "html-brunch-static": "~1.4.0",
-    "marked-brunch-static": "~1.1.0",
+    "html-brunch-static": "~1.4.1",
+    "marked-brunch-static": "~1.1.1",
     "postcss-brunch": "~2.10.1",
     "postcss-preset-env": "~6.4.0",
-    "pug-brunch-static": "~3.0.0",
+    "pug-brunch-static": "~3.0.1",
     "rimraf": "~2.6.2"
   }
 }
