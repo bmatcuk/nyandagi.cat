@@ -22,7 +22,7 @@
   "devDependencies": {
     "brunch": "~2.10.17",
     "brunch-static": "~1.2.1",
-    "html-brunch-static": "~1.4.1",
+    "html-brunch-static": "~1.4.2",
     "marked-brunch-static": "~1.1.1",
     "postcss-brunch": "~2.10.1",
     "postcss-preset-env": "~6.4.0",
